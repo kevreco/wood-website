@@ -1,0 +1,10 @@
+layout/documentation-subsection folder exists only because we cannot create a template for subsections.
+
+When you assign _index.html with the type "documentation-subsection" those layouts will be applied.
+
+
+Exmaple of documentation/my-subsection/_index.html:
+
+---
+type: documentation-subsection
+---
