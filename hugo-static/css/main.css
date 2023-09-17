@@ -19,3 +19,16 @@
 #main-content {
 	margin-left: var(--sidebar-width); /* Set the width of the sidebar */
 }
+
+/* TableOfContents is a Hugo built-in id */
+nav #TableOfContents {
+	margin:0;
+	padding:0;
+}
+
+#TableOfContents ul  {
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
+}

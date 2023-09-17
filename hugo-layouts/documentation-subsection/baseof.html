@@ -27,8 +27,11 @@
 			<a href="../{{ $version }}">{{ $version }}</a>
 		{{ end }}
 		
-		<h2>Table of Content</h2>
-		<p>@TODO Display table of content</p>
+		<h2>Table of Contents</h2>
+		
+		{{ block "table-of-contents" . }}
+			
+		{{ end }}
 	</div>
 	<div id="main-content">
 		<p> @TODO Display all versions here.</p>
