@@ -15,7 +15,20 @@
   <body>
 	<!-- Side bar navigation -->
 	<div id="sidebar">
-		<p> Display table of content</p>
+
+		<h2>Versions</h2>
+		<!-- Retrieve parent and iterate over all directories -->
+		{{ range .Parent.Sections }}
+
+		  {{ $pathWithVersion := path.Dir .File.Filename }}
+		 
+		  {{ $version := path.Base $pathWithVersion }}
+		    
+			<a href="../{{ $version }}">{{ $version }}</a>
+		{{ end }}
+		
+		<h2>Table of Content</h2>
+		<p>@TODO Display table of content</p>
 	</div>
 	<div id="main-content">
 		<p> @TODO Display all versions here.</p>
@@ -23,10 +36,10 @@
 		
 		<!-- Code that all your templates share, like a header -->
 		{{ block "main" . }}
-		  <!-- The part of the page that begins to differ between templates -->
+			<!-- The part of the page that begins to differ between templates -->
 		{{ end }}
 		{{ block "footer" . }}
-		<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+			<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
 		{{ end }}
 	</div>
   </body>
