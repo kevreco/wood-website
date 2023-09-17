@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+	<link rel="stylesheet" href="{{ "css/main.css" | relURL }}"/>
+	
     <meta charset="utf-8">
-    <title>{{ block "title" . }}
-      <!-- Blocks may include default content. -->
-      {{ .Site.Title }}
-    {{ end }}</title>
+    <title>
+		{{ block "title" . }}
+			{{ .Site.Title }}
+		{{ end }}
+	</title>
+	
   </head>
   <body>
-    <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-    {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-    {{ end }}
+	<!-- Side bar navigation -->
+	<div id="sidebar">
+		<p> Display table of content</p>
+	</div>
+	<div id="main-content">
+		<p> @TODO Display all versions here.</p>
+		<p> @TODO Display title</p>
+		
+		<!-- Code that all your templates share, like a header -->
+		{{ block "main" . }}
+		  <!-- The part of the page that begins to differ between templates -->
+		{{ end }}
+		{{ block "footer" . }}
+		<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+		{{ end }}
+	</div>
   </body>
 </html>
