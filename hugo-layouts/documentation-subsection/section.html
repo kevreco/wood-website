@@ -1,9 +1,9 @@
 {{ define "main" }}
-		<p>From layouts: documentation-subsection: section</p>
-	
-		{{ range  sort .Pages "File.Path" }}
-		   <h2>File: {{ .File }}</h2> 
-		   <p>{{ .Content }}</p>
-		{{ end }}
+	<p>From layouts: documentation-subsection: section</p>
+
+	{{ range  sort .Pages "File.Path" }}
+	   <h2>File: {{ .File }}</h2> 
+	   <p>{{ .Content }}</p>
+	{{ end }}
 
 {{ end }}
