@@ -1,0 +1,38 @@
+{{ $file := .Get 0 }}
+{{ $extension := .Get 1 }}
+
+{{ with $.Site.Params.snippetsDir }}
+
+	{{ $fullPath := (path.Join . $file)}}
+
+	{{ if fileExists $fullPath  }}
+		
+		{{/*
+			// If there is an .input file insert it as <samp>
+		*/}}
+
+		{{ if fileExists (print $fullPath ".input") }}
+			<samp>{{ (print $fullPath ".input") | readFile | safeHTML }}</samp>
+		{{ end }}
+
+		{{/*
+			// If there is an .html file insert it instead. The .html would contains the highlighted content of the code.
+		*/}}
+		
+		{{ $fileHtml := (print $fullPath ".html") }}
+
+		{{ if fileExists $fileHtml  }}
+			<code>{{ $fileHtml | readFile | safeHTML }}</code>
+		{{ else }}
+			<code>{{ $fullPath | readFile | safeHTML }}</code>
+		{{ end }}
+		
+		{{/*
+			// If there is an .output file insert it as <samp>
+		*/}}
+
+		{{ if fileExists (print $fullPath ".output") }}
+			<samp>{{ (print $fullPath ".output") | readFile | safeHTML }}</samp>
+		{{ end }}
+	{{ end }}
+{{ end }}

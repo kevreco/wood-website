@@ -5,3 +5,6 @@ languageCode = "en-us"
 contentDir = "hugo-content"       # Default was "content"
 layoutDir = "hugo-layouts"        # Default was "layouts"
 staticDir = "hugo-static"         # Default was "static"
+
+[params]
+snippetsDir = "hugo-static/snippets"
