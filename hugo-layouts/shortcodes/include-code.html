@@ -22,9 +22,9 @@
 		{{ $fileHtml := (print $fullPath ".html") }}
 
 		{{ if fileExists $fileHtml  }}
-			<code>{{ $fileHtml | readFile | safeHTML }}</code>
+			<pre><code>{{ $fileHtml | readFile | safeHTML }}</code></pre>
 		{{ else }}
-			<code>{{ $fullPath | readFile | safeHTML }}</code>
+			<pre><code>{{ $fullPath | readFile | safeHTML }}</code></pre>
 		{{ end }}
 		
 		{{/*

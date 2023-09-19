@@ -1,7 +1,9 @@
-:root{
+:root {
 	--sidebar-width: 18rem;
 	--sidebar-padding: 1em;
- }
+	
+	font-family: "Open Sans", sans-serif;
+}
 
 #sidebar {
 
@@ -20,24 +22,3 @@
 	margin-left: var(--sidebar-width); /* Set the width of the sidebar */
 }
 
-/* TableOfContents is a Hugo built-in id */
-nav #TableOfContents {
-	margin:0;
-	padding:0;
-}
-
-#TableOfContents ul  {
-	margin-top:0;
-	margin-bottom:0;
-	padding-top:0;
-	padding-bottom:0;
-}
-
-.h-anchor
-{
-	font-size: 100%; visibility: hidden; color:silver;
-}
-.h-anchor h1:hover a, h2:hover a, h3:hover a, h4:hover a
-{
-	visibility: visible;
-}
