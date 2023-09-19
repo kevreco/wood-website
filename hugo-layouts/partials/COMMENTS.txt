@@ -1,0 +1,1 @@
+Files in partial can be called in template files (files under layouts/).
