@@ -22,9 +22,14 @@
 		{{- $fileHtml := (print $fullPath ".html") -}}
 
 		{{- if fileExists $fileHtml  -}}
-			<pre><code>{{- $fileHtml | readFile | safeHTML -}}</code></pre>
+			<pre><code>{{- $fileHtml | readFile  -}}</code></pre>
 		{{- else -}}
-			<pre><code>{{- $fullPath | readFile | safeHTML -}}</code></pre>
+			<pre><code>
+				{{- $content := readFile $fullPath -}}
+				{{- $lines := split $content "\n" -}}
+				{{- $line := delimit $lines "<br>" -}}
+				{{- $line -}}
+			</code></pre>
 		{{- end -}}
 		
 		{{/*
@@ -32,7 +37,12 @@
 		*/}}
 
 		{{- if fileExists (print $fullPath ".output") -}}
-			<samp>{{- (print $fullPath ".output") | readFile | safeHTML -}}</samp>
+			<samp>
+				{{- $content := (print $fullPath ".output") | readFile  -}}
+				{{- $lines := split $content "\n" -}}
+				{{- $line := delimit $lines "<br>" -}}
+				{{- $line -}}
+			</samp>
 		{{- end -}}
 	{{- end -}}
 {{- end -}}

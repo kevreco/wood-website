@@ -13,12 +13,10 @@ pre > code,  samp {
     color: #ccc;
 	text-wrap: nowrap;
 	display: block;
-	padding: 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	padding-left: 0.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 	border-radius: 0.3125rem;
-}
-
-samp {
-	padding: 0.5em;
 }
