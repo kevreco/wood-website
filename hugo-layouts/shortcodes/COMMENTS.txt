@@ -1,0 +1,1 @@
+Files under shortcodes/ can be called in content files (.md or .html).

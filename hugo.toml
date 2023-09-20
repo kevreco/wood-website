@@ -1,7 +1,10 @@
 baseURL = "https://example.com"
-title = "Wood Programming Language"
+title = "Wood Programming Language Documentation"
 languageCode = "en-us"
 
-archetypeDir = "hugo-archetypes"  # Default was "archetypes"
 contentDir = "hugo-content"       # Default was "content"
 layoutDir = "hugo-layouts"        # Default was "layouts"
+staticDir = "hugo-static"         # Default was "static"
+
+[params]
+snippetsDir = "hugo-static/snippets"

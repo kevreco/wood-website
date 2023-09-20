@@ -1,9 +1,24 @@
-{{ define "main" }}
-		<p>From layouts: documentation-subsection: section</p>
-	
-		{{ range  sort .Pages "File.Path" }}
-		   <h2>File: {{ .File }}</h2> 
-		   <p>{{ .Content }}</p>
-		{{ end }}
+{{- define "table-of-contents" }}
 
-{{ end }}
+	{{- range  sort .Pages "File.Path" -}}
+	
+		{{- .TableOfContents -}}
+
+	{{- end -}}
+	
+{{- end -}}
+
+
+{{- define "main" -}}
+
+	<p>From layouts: documentation-subsection: section</p>
+
+	{{- range  sort .Pages "File.Path" -}}
+	   <h2>File: {{- .File -}}</h2> 
+	   <p>
+			{{/* This add an anchor next to all <h>.  */}}
+			{{- .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1} <a href="#${2}" class="h-anchor" ariaLabel="Anchor">§&#xFE0E;</a> ${3}` | safeHTML -}}
+	   </p>
+	{{- end -}}
+
+{{- end -}}
