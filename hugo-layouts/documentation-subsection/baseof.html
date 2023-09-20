@@ -21,20 +21,9 @@
   <body>
 	<!-- Side bar navigation -->
 	<div id="sidebar">
-
-		<h2>Versions</h2>
-		<!-- Retrieve parent and iterate over all directories -->
-		{{- range .Parent.Sections -}}
-
-		  {{- $pathWithVersion := path.Dir .File.Filename -}}
-		 
-		  {{- $version := path.Base $pathWithVersion -}}
-		    
-			<a href="../{{ $version }}">{{ $version }}</a>
-		{{ end }}
-		
-		<h2>Table of Contents</h2>
-		
+		{{- block "versions" . -}}
+			
+		{{- end -}}
 		{{- block "table-of-contents" . -}}
 			
 		{{- end -}}

@@ -1,5 +1,21 @@
+{{- define "versions" }}
+
+	<h2>Versions</h2>
+
+	{{- range .Parent.Sections -}}
+
+	  {{- $pathWithVersion := path.Dir .File.Filename -}}
+	 
+	  {{- $version := path.Base $pathWithVersion -}}
+		
+		<a href="../{{ $version }}">{{ $version }}</a>
+	{{ end }}
+{{- end -}}
+
 {{- define "table-of-contents" }}
 
+	<h2>Table of Contents</h2>
+ 
 	{{- range  sort .Pages "File.Path" -}}
 	
 		{{- .TableOfContents -}}

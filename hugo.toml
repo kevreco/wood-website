@@ -1,5 +1,5 @@
 baseURL = "https://example.com"
-title = "Wood Programming Language Documentation"
+title = "Wood Programming Language"
 languageCode = "en-us"
 
 contentDir = "hugo-content"       # Default was "content"
