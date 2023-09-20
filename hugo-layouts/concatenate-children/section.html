@@ -1,15 +1,27 @@
-{{- define "versions" }}
+{{- define "header" }}
 
-	<h2>Versions</h2>
+	{{/* List sibling directory */}}
+	{{- if .Params.ListSiblings -}}
+	
+		{{- range .Parent.Sections -}}
 
-	{{- range .Parent.Sections -}}
-
-	  {{- $pathWithVersion := path.Dir .File.Filename -}}
-	 
-	  {{- $version := path.Base $pathWithVersion -}}
+		  {{- $directoryPath := path.Dir .File.Filename -}}
+		 
+		  {{- $baseName := path.Base $directoryPath -}}
+			
+			<a href="../{{ $baseName }}">{{ $baseName }}</a>
+		{{ end }}
 		
-		<a href="../{{ $version }}">{{ $version }}</a>
-	{{ end }}
+	{{- end -}}
+{{- end -}}
+
+{{- define "title" }}
+
+	{{/* Only display the SectionTitle if the page contains one */}}
+	{{- with .Params.SectionTitle -}}
+		<h1>{{ . }}</h1>
+	{{- end -}}
+	
 {{- end -}}
 
 {{- define "table-of-contents" }}
@@ -23,7 +35,6 @@
 	{{- end -}}
 	
 {{- end -}}
-
 
 {{- define "main" -}}
 
