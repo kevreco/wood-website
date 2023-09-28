@@ -8,15 +8,21 @@
 	visibility: visible;
 }
 
-pre > code,  samp {
+code {
     background: #000;
     color: #ccc;
-	text-wrap: nowrap;
+	
+	border-radius: 0.3125rem;
+	padding: 0.2em;
+}
+
+pre > code, samp {
+   	text-wrap: nowrap;
 	display: block;
+
 	padding-top: 0.3em;
 	padding-bottom: 0.3em;
 	padding-left: 0.5em;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
-	border-radius: 0.3125rem;
 }

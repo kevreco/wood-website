@@ -25,7 +25,7 @@
 			<pre><code>{{- $fileHtml | readFile  -}}</code></pre>
 		{{- else -}}
 			<pre><code>
-				{{- $content := readFile $fullPath -}}
+				{{- $content := readFile $fullPath | safeHTML -}}
 				{{- $lines := split $content "\n" -}}
 				{{- $line := delimit $lines "<br>" -}}
 				{{- $line -}}
@@ -38,7 +38,7 @@
 
 		{{- if fileExists (print $fullPath ".output") -}}
 			<samp>
-				{{- $content := (print $fullPath ".output") | readFile  -}}
+				{{- $content := (print $fullPath ".output") | readFile  | safeHTML -}}
 				{{- $lines := split $content "\n" -}}
 				{{- $line := delimit $lines "<br>" -}}
 				{{- $line -}}
