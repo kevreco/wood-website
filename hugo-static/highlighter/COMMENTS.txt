@@ -1,0 +1,1 @@
+wood.js was initially based on rust.min.js and I tweaked (or will tweak) it to fit wood language.

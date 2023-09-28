@@ -1,3 +1,5 @@
 ---
-type : documentation-subsection
+type : concatenate-children
+SectionTitle: Wood Programming Language Documentation
+ListSiblings: Yes
 ---

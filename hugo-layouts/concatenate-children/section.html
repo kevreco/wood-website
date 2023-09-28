@@ -1,0 +1,48 @@
+{{- define "header" }}
+
+	{{/* List sibling directory */}}
+	{{- if .Params.ListSiblings -}}
+	
+		{{- range .Parent.Sections -}}
+
+		  {{- $directoryPath := path.Dir .File.Filename -}}
+		 
+		  {{- $baseName := path.Base $directoryPath -}}
+			
+			<a href="../{{ $baseName }}">{{ $baseName }}</a>
+		{{ end }}
+		
+	{{- end -}}
+{{- end -}}
+
+{{- define "title" }}
+
+	{{/* Only display the SectionTitle if the page contains one */}}
+	{{- with .Params.SectionTitle -}}
+		<h1>{{ . }}</h1>
+	{{- end -}}
+	
+{{- end -}}
+
+{{- define "table-of-contents" }}
+
+	<h2>Table of Contents</h2>
+ 
+	{{- range  sort .Pages "File.Path" -}}
+	
+		{{- .TableOfContents -}}
+
+	{{- end -}}
+	
+{{- end -}}
+
+{{- define "main" -}}
+
+	{{- range  sort .Pages "File.Path" -}}
+	   <p>
+			{{/* This add an anchor next to all <h>.  */}}
+			{{- .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1} <a href="#${2}" class="h-anchor" ariaLabel="Anchor">§&#xFE0E;</a> ${3}` | safeHTML -}}
+	   </p>
+	{{- end -}}
+
+{{- end -}}

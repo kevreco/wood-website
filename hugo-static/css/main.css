@@ -20,5 +20,6 @@
 
 #main-content {
 	margin-left: var(--sidebar-width); /* Set the width of the sidebar */
+	max-width: 50em;
 }
 
