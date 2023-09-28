@@ -8,3 +8,9 @@ staticDir = "hugo-static"         # Default was "static"
 
 [params]
 snippetsDir = "hugo-static/snippets"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2
