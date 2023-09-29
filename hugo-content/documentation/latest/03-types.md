@@ -25,7 +25,7 @@ No imaginary types for now.
 
 ### Struct Type
 
-Struct type are composite types (type made from other types).
+Struct type is an aggregated type and a composite type (type made from other types).
 
 ```wood
 Point : struct { x: i32; y: i32 }
@@ -52,8 +52,16 @@ print(y);
 
 ### Array Type
 
-> NOTE:\
-Maybe `arr(T)` ?
+An array type is an aggregated type made from a secondary type T.
+
+```wood
+
+values = arr(i32).{0, 1 , 2 };
+
+print(values[0]);
+print(values[1]);
+print(values[3]);
+```
 
 ### Array View Type
 
