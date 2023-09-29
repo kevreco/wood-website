@@ -12,7 +12,12 @@
 		*/}}
 
 		{{- if fileExists (print $fullPath ".input") -}}
-			<samp>{{- (print $fullPath ".input") | readFile | safeHTML -}}</samp>
+			<pre><samp>
+				{{- $content := (print $fullPath ".input") | readFile -}}
+				{{- $lines := split $content "\n" -}}
+				{{- $line := delimit $lines "" -}}
+				{{- $line -}}
+			</samp></pre>
 		{{- end -}}
 
 		{{/*
@@ -37,12 +42,12 @@
 		*/}}
 
 		{{- if fileExists (print $fullPath ".output") -}}
-			<samp>
-				{{- $content := (print $fullPath ".output") | readFile  | safeHTML -}}
+			<pre><samp>
+				{{- $content := (print $fullPath ".output") | readFile -}}
 				{{- $lines := split $content "\n" -}}
-				{{- $line := delimit $lines "<br>" -}}
+				{{- $line := delimit $lines "" -}}
 				{{- $line -}}
-			</samp>
+			</samp></pre>
 		{{- end -}}
 	{{- end -}}
 {{- end -}}
