@@ -15,7 +15,7 @@ loop : for() {
 	break(loop);
 }
 
-// W give the for loop a label, then we can break from the loop using the label.
+// A label is givent the for loop, then we can break from the for loop using the label.
 loop2 : for() {
 	for() {
 		for() {
