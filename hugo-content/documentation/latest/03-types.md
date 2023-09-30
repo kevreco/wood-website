@@ -55,7 +55,6 @@ print(y);
 An array type is an aggregated type made from a secondary type T.
 
 ```wood
-
 values = arr(i32).{0, 1 , 2 };
 
 print(values[0]);
