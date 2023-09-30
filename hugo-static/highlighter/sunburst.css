@@ -1,11 +1,13 @@
+/* tweaked sunburst.css from highlight.js, modified values has been annotated */
+
 pre code.hljs {
 	display: block;
 	overflow-x: auto;
-	padding: 1em
+	/* padding: 1em */    /* commented */
 }
 
 code.hljs {
-	padding: 3px 5px
+	/* padding: 3px 5px */ /* commented */
 }
 
 .hljs {
