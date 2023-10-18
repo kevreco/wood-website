@@ -1,14 +1,41 @@
+:root {
+	--color-A: #98bf91;
+	--color-B: #1b1e1b;
+	--color-C: #58a6ff;
+	--color-D: #8894d1;
+	--color-E: #202520; /* background 2? */
+}
+
+
 @media (prefers-color-scheme: dark) {
     body {
-        color: #98bf91; 
-        background: #1b1d1e
+        color: var(--color-A);
+        background: var(--color-B);
     }
 
     a:link {
-        color: #58a6ff
+        color: var(--color-C);
     }
 
     a:visited {
-        color: #8e96f0
+        color: var(--color-D);
     }
+
+	/* preformatted and code */
+	
+	code {
+		color: var(--color-C);
+	}
+
+	samp {
+		background: #000; /* black */
+		color: #ccc; /* grey */
+
+	}
+
+	pre > code {
+		background: var(--color-E);
+
+	}
+
 }

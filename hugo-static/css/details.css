@@ -9,9 +9,12 @@
 }
 
 code, samp {
-    background: #000;
-    color: #ccc;
-	
+	border-radius: 0.3125rem;
+	padding: 0.2em;
+}
+
+samp {
+
 	border-radius: 0.3125rem;
 	padding: 0.2em;
 }
