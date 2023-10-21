@@ -34,7 +34,7 @@
 
 html {
   cursor: default; /* 1 */
-  line-height: 1.5; /* 2 */
+  /* line-height: 1.5; */ /* 2 */ /* commented */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
   -webkit-tap-highlight-color: transparent /* 4 */;
