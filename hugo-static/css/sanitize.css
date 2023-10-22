@@ -114,8 +114,8 @@ main {
 
 nav ol,
 nav ul {
-  list-style: none;
-  padding: 0;
+  /* list-style: none; */ /* commented */
+  /* padding: 0; */ /* commented */
 }
 
 /**
