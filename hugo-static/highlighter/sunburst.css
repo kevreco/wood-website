@@ -1,0 +1,107 @@
+/* tweaked sunburst.css from highlight.js, modified values has been annotated */
+
+pre code.hljs {
+	display: block;
+	overflow-x: auto;
+	/* padding: 1em */    /* commented */
+}
+
+code.hljs {
+	/* padding: 3px 5px */ /* commented */
+}
+
+.hljs {
+	background: #202520;
+	color: #98bf91
+}
+
+.hljs-comment,
+.hljs-quote {
+	color: #8894d1;
+	font-style: italic
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+	/* color: #e28964; */ /* commented */
+	font-weight: bold; /* added */
+}
+
+.hljs-string {
+	color: #8894d1
+}
+
+.hljs-subst {
+	color: #daefa3
+}
+
+.hljs-link,
+.hljs-regexp {
+	color: #e9c062
+}
+
+.hljs-name,
+.hljs-section,
+.hljs-tag,
+.hljs-title {
+	color: #58a6ff
+}
+
+.hljs-class .hljs-title,
+.hljs-doctag,
+.hljs-title.class_ {
+	text-decoration: underline
+}
+
+.hljs-bullet,
+.hljs-number,
+.hljs-symbol {
+	color: #8894d1
+}
+
+.hljs-params,
+.hljs-template-variable,
+.hljs-variable {
+	color: #3e87e3
+}
+
+.hljs-attribute {
+	color: #cda869
+}
+
+.hljs-meta {
+	color: #8996a8
+}
+
+.hljs-formula {
+	background-color: #0e2231;
+	color: #98bf91;
+	font-style: italic
+}
+
+.hljs-addition {
+	background-color: #253b22;
+	color: #98bf91
+}
+
+.hljs-deletion {
+	background-color: #420e09;
+	color: #98bf91
+}
+
+.hljs-selector-class {
+	color: #9b703f
+}
+
+.hljs-selector-id {
+	color: #8b98ab
+}
+
+.hljs-emphasis {
+	font-style: italic
+}
+
+.hljs-strong {
+	font-weight: 700
+}
