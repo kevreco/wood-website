@@ -1,28 +1,47 @@
 ## Control Flow
 
-### For Loop
+### Loop
 
 ```wood
 // Loop forever
-for() {
-    // Some intructions...
-}
-
-// Exit loop
-
-// we give the for loop a label, then
-loop : for() {
-	break(loop);
-}
-
-// A label is givent the for loop, then we can break from the for loop using the label.
-loop2 : for() {
-	for() {
-		for() {
-			// Some intructions...
-			break(loop2); // all for loops
-		}
-	}
+loop {
+    // ...
 }
 ```
+
+#### Exit a loop
+
+To break out of a loop we must give a label to the loop and use the `break` keyword.
+```wood
+label : loop {
+
+	// ...
+
+	if (condition)
+	{
+		break(label);
+	}
+
+	// ...
+}
+```
+
+Using label allow us to explicitely break from any loop.
+```wood
+label :
+	loop {
+		loop {
+			loop {
+				
+				// Some intructions ...
+				
+				if (condition)
+				{
+					break(label); // break out of all for loop
+				}
+			}
+		}
+	}	
+```
+> NOTE:\
 Using a labeled block would be the only way to break?
