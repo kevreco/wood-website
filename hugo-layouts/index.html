@@ -1,0 +1,12 @@
+{{- define "title" }}
+
+	{{/* Only display the SectionTitle if the page contains one */}}
+	{{- with .Params.SectionTitle -}}
+		<h1>{{ . }}</h1>
+	{{- end -}}
+	
+{{- end -}}
+
+{{- define "main" -}}
+	 <article>{{ .Content }}</article>
+{{- end -}}
